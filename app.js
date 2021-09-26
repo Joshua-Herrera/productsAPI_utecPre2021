@@ -1,5 +1,5 @@
 const express = require('express');
-const productRouter = require ('./routes/productRouter');
+const productRouter = require('./routes/productRouter');
 
 const app = express()
 
@@ -18,6 +18,9 @@ app.use(express.json())
 app.use(express.static('public'))
 
 //Rutas de la aplicacion
+app.get('/', function (req, res) {
+    res.sendFile('index.html', { root: __dirname })
+})
 app.use('/api/v1/products', productRouter)
 
 module.exports = app;
