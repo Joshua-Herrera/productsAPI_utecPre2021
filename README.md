@@ -1,1 +1,2 @@
-# productsAPI_utecPre2021
+# producsAPI_utecPre2021
+API de practica para ser publicada y mostrar informacion sobre productos
