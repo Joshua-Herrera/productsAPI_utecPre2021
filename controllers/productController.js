@@ -16,7 +16,6 @@ exports.getAllProducts = catchAsync(async (req, res) => {
     const data = await Product.find()
 
     res.status(200).json({
-        message: "Success",
         data
     })
 })
@@ -34,7 +33,6 @@ exports.getOneProduct = catchAsync(async (req, res) => {
 exports.addProduct = catchAsync(async (req, res) => {
     const data = await Product.create(req.body)
     res.status(201).json({
-        message: "Success",
         data
     })
 })
@@ -52,7 +50,6 @@ exports.updateProduct = catchAsync(async (req, res, next) => {
     }
 
     res.status(200).json({
-        message: "Success",
         data
     })
 })
@@ -66,7 +63,6 @@ exports.deleteProduct = catchAsync(async (req, res, next) => {
     }
 
     res.status(204).json({
-        message: "Success",
         data: null
     })
 })
